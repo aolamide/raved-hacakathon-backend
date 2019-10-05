@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node app.js",
@@ -13,9 +10,10 @@
     "start": "npm run build && node dist/app.js",
     "serve": "node dist/app.js"
   },
-  "author": "",
+  "author": "Team Flash",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
