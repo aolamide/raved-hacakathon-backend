@@ -6,7 +6,6 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import expressValidator from 'express-validator';
 import cors from 'cors';
-import fs from 'fs';
 // import cors from 'cors';
 dotenv.config();
 const app = express();
@@ -26,11 +25,7 @@ import authRoutes  from './routes/auth';
 import userRoutes  from './routes/user.route';
 
 app.get('/', (req, res) => {
-    fs.readFile('docs/apiDocs.json', (err, data) => {
-        if(err) res.status(400).json({error : err})
-        const docs = JSON.parse(data);
-        res.json(docs);
-    });
+    res.json('Hello')
 })
 
 // middleware
